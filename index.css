@@ -933,7 +933,7 @@ header[role="banner"] {
 
 .section.timeline {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .timeline {
