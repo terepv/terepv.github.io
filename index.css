@@ -896,7 +896,7 @@ header[role="banner"] {
 
 
 
-// Card mobile version //
+*/ Card mobile version */
     
 @media (max-width: 23em) {
     .tpv-card {
@@ -929,7 +929,7 @@ header[role="banner"] {
     }
 }
 
-// Timeline //
+// Timeline /
 
 .timeline {
   position: relative;
@@ -981,7 +981,7 @@ header[role="banner"] {
 }
 
 .timeline-dot {
-  position: absolute;
+  position: relative;
   left: auto;
   top: 0%;
   right: auto;
@@ -1005,4 +1005,13 @@ header[role="banner"] {
   color: #a7aaad;
   font-size: 16px;
   line-height: 1.8;
+}
+
+.history {
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+    margin: 0 auto;
+
 }
