@@ -931,11 +931,6 @@ header[role="banner"] {
 
 // Timeline //
 
-/* .section.timeline {
-    display: flex;
-    justify-content: space-between;
-}
-*/
 .timeline {
   position: relative;
   display: -webkit-box;
