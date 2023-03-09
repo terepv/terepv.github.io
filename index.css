@@ -1013,7 +1013,8 @@ i:hover{
 .skills {
   display: flex;
   flex-wrap: wrap; }
-  .skills__skill {
+
+.skills__skill {
     padding: 1rem 2rem;
     margin-bottom: 1.5rem;
     margin-right: 1.5rem;
