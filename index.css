@@ -981,8 +981,9 @@ h5{
 	-ms-transition: all .2s ease-out;
 	-o-transition: all .2s ease-out;
 	transition: all .2s ease-out;
-	filter:drop-shadow(2px -9px 4px rgba(0, 69, 134, 0.2));
+	/*filter:drop-shadow(2px -9px 4px rgba(0, 69, 134, 0.2));*/
 }
+
 .card:hover svg{
 	filter:drop-shadow(2px -9px 4px rgba(0, 69, 134, 0.4));
 }
