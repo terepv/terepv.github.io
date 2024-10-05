@@ -1,6 +1,28 @@
-.container-fluid {
+.carousel {
+    max-height: 600px; /* Adjust this value */
+    overflow: hidden;
+  }
+
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .container-fluid {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 35px;
+    margin-right: 35px;
+    padding: 20px 0 20px 0;
 }
