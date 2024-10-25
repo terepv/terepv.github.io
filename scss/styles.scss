@@ -2,6 +2,8 @@ $funny-color: #ff69b4;
 $hover-color: #ff1493; 
 
 .button {
+  position: relative; 
+  display: inline-block; 
   background-color: $funny-color;
   border: 2px solid #fff;
   color: white;
@@ -11,13 +13,38 @@ $hover-color: #ff1493;
   text-align: center;
   cursor: pointer;
   transition: transform 0.3s, background-color 0.3s;
-  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-family: 'Roboto', cursive, sans-serif;
+  text-decoration: none;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    transition: opacity 0.3s;
+  }
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0; 
+    transition: opacity 0.3s;
+  }
 
   &:hover {
     background-color: $hover-color;
     transform: rotate(10deg) scale(1.1);
-    content: "Miau miau miau!"; 
     animation: wiggle 0.5s;
+
+    &::before {
+      opacity: 0; 
+    }
+
+    &::after {
+      opacity: 1;
+    }
   }
 }
 

@@ -47,10 +47,10 @@ flex-direction: column;
 align-items: center;
 } 
 
-.card__button { 
+/*.card__button { 
 padding: 0.5rem 1rem; 
 
-} 
+} */
 
 .button--primary { 
 background-color: rgb(237, 207, 249); 
