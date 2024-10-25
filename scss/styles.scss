@@ -60,7 +60,7 @@ $hover-color: #ff1493;
 
 $border-colors: #FF69B4, #FFD700, #ADFF2F, #1E90FF, #FF4500; 
 
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -73,7 +73,7 @@ body {
   min-height: 100vh;
   background-color: #f8f8f8;
   font-family: Arial, sans-serif;
-}
+} */
 
 .cat-grid {
   display: grid;
@@ -84,7 +84,7 @@ body {
   width: 100%;
 }
 
-.cat-grid img {
+.cat-grid-img {
   width: 100%;
   height: auto;
   border-radius: 12px;
