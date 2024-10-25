@@ -1,6 +1,7 @@
+
 .button {
-  position: relative;
-  display: inline-block;
+  position: relative; 
+  display: inline-block; 
   background-color: #ff69b4;
   border: 2px solid #fff;
   color: white;
@@ -10,22 +11,24 @@
   text-align: center;
   cursor: pointer;
   transition: transform 0.3s, background-color 0.3s;
-  font-family: "Roboto", cursive, sans-serif;
-  text-decoration: none;
+  font-family: "Roboto", sans-serif; 
+  text-decoration: none; 
 }
 .button::before {
+  content: "Hover me!"; 
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); 
   transition: opacity 0.3s;
 }
 .button::after {
+  content: "Miau miau miau!"; 
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
+  transform: translate(-50%, -50%); 
+  opacity: 0; 
   transition: opacity 0.3s;
 }
 .button:hover {
@@ -34,10 +37,10 @@
   animation: wiggle 0.5s;
 }
 .button:hover::before {
-  opacity: 0;
+  opacity: 0; 
 }
 .button:hover::after {
-  opacity: 1;
+  opacity: 1; 
 }
 
 @keyframes wiggle {

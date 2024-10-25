@@ -2,8 +2,8 @@ $funny-color: #ff69b4;
 $hover-color: #ff1493; 
 
 .button {
-  position: relative; 
-  display: inline-block; 
+  position: relative; /* Necessary for positioning pseudo-elements */
+  display: inline-block; /* Allow padding and centering */
   background-color: $funny-color;
   border: 2px solid #fff;
   color: white;
@@ -13,23 +13,25 @@ $hover-color: #ff1493;
   text-align: center;
   cursor: pointer;
   transition: transform 0.3s, background-color 0.3s;
-  font-family: 'Roboto', cursive, sans-serif;
-  text-decoration: none;
+  font-family: 'Roboto', sans-serif; /* Changed to Roboto */
+  text-decoration: none; /* Remove underline from the link */
 
   &::before {
+    content: "Hover me!"; /* Original text */
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); 
+    transform: translate(-50%, -50%); /* Center the text */
     transition: opacity 0.3s;
   }
 
   &::after {
+    content: "Miau miau miau!"; /* New text on hover */
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0; 
+    transform: translate(-50%, -50%); /* Center the text */
+    opacity: 0; /* Initially hidden */
     transition: opacity 0.3s;
   }
 
@@ -39,11 +41,11 @@ $hover-color: #ff1493;
     animation: wiggle 0.5s;
 
     &::before {
-      opacity: 0; 
+      opacity: 0; /* Hide original text on hover */
     }
 
     &::after {
-      opacity: 1;
+      opacity: 1; /* Show new text on hover */
     }
   }
 }
