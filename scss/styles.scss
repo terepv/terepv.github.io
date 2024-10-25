@@ -2,8 +2,8 @@ $funny-color: #ff69b4;
 $hover-color: #ff1493; 
 
 .button {
-  position: relative; /* Necessary for positioning pseudo-elements */
-  display: inline-block; /* Allow padding and centering */
+  position: relative; 
+  display: inline-block; 
   background-color: $funny-color;
   border: 2px solid #fff;
   color: white;
@@ -13,25 +13,25 @@ $hover-color: #ff1493;
   text-align: center;
   cursor: pointer;
   transition: transform 0.3s, background-color 0.3s;
-  font-family: 'Roboto', sans-serif; /* Changed to Roboto */
-  text-decoration: none; /* Remove underline from the link */
+  font-family: 'Roboto', sans-serif; 
+  text-decoration: none; 
 
   &::before {
-    content: "Hover me!"; /* Original text */
+    content: "Hover me!"; 
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Center the text */
+    transform: translate(-50%, -50%); 
     transition: opacity 0.3s;
   }
 
   &::after {
-    content: "Miau miau miau!"; /* New text on hover */
+    content: "Miau miau miau!"; 
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Center the text */
-    opacity: 0; /* Initially hidden */
+    transform: translate(-50%, -50%); 
+    opacity: 0; 
     transition: opacity 0.3s;
   }
 
@@ -41,11 +41,11 @@ $hover-color: #ff1493;
     animation: wiggle 0.5s;
 
     &::before {
-      opacity: 0; /* Hide original text on hover */
+      opacity: 0; 
     }
 
     &::after {
-      opacity: 1; /* Show new text on hover */
+      opacity: 1; 
     }
   }
 }
@@ -54,4 +54,57 @@ $hover-color: #ff1493;
   0% { transform: rotate(10deg); }
   50% { transform: rotate(-10deg); }
   100% { transform: rotate(10deg); }
+}
+
+// Grid dentro del SASS
+
+$border-colors: #FF69B4, #FFD700, #ADFF2F, #1E90FF, #FF4500; 
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f8f8f8;
+  font-family: Arial, sans-serif;
+}
+
+.cat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+  padding: 20px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.cat-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  transition: transform 0.5s ease, box-shadow 0.5s ease, border 0.5s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+  &:hover {
+    transform: rotate(15deg) scale(1.2); // Funny enlarge and tilt
+    border: 5px solid random-color(); // Apply random color directly
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    animation: pose 0.8s infinite alternate; // Wobble animation
+  }
+}
+
+// Fun random border color
+@function random-color() {
+  @return nth($border-colors, random(length($border-colors)));
+}
+
+@keyframes pose {
+  0% { transform: rotate(10deg); }
+  100% { transform: rotate(-10deg); }
 }

@@ -1,7 +1,6 @@
-
 .button {
-  position: relative; 
-  display: inline-block; 
+  position: relative;
+  display: inline-block;
   background-color: #ff69b4;
   border: 2px solid #fff;
   color: white;
@@ -11,24 +10,24 @@
   text-align: center;
   cursor: pointer;
   transition: transform 0.3s, background-color 0.3s;
-  font-family: "Roboto", sans-serif; 
-  text-decoration: none; 
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
 }
 .button::before {
-  content: "Hover me!"; 
+  content: "Hover me!";
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); 
+  transform: translate(-50%, -50%);
   transition: opacity 0.3s;
 }
 .button::after {
-  content: "Miau miau miau!"; 
+  content: "Miau miau miau!";
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); 
-  opacity: 0; 
+  transform: translate(-50%, -50%);
+  opacity: 0;
   transition: opacity 0.3s;
 }
 .button:hover {
@@ -37,10 +36,10 @@
   animation: wiggle 0.5s;
 }
 .button:hover::before {
-  opacity: 0; 
+  opacity: 0;
 }
 .button:hover::after {
-  opacity: 1; 
+  opacity: 1;
 }
 
 @keyframes wiggle {
@@ -52,6 +51,52 @@
   }
   100% {
     transform: rotate(10deg);
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f8f8f8;
+  font-family: Arial, sans-serif;
+}
+
+.cat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+  padding: 20px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.cat-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  transition: transform 0.5s ease, box-shadow 0.5s ease, border 0.5s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.cat-grid img:hover {
+  transform: rotate(15deg) scale(1.2);
+  border: 5px solid random-color();
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  animation: pose 0.8s infinite alternate;
+}
+
+@keyframes pose {
+  0% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(-10deg);
   }
 }
 
